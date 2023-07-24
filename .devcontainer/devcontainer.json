@@ -1,0 +1,28 @@
+{
+	"name": "ibm_zos_cics",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/git:1": {},
+		"ghcr.io/devcontainers/features/common-utils:2": {},
+        "./ansible": {
+            "version": "stable-2.15"
+        }
+    },
+    "customizations": {
+		"vscode": {
+            "extensions": [
+                "ms-python.python",
+                "eamodio.gitlens",
+                "github.vscode-pull-request-github"
+            ]
+        }
+    },
+    "privileged": true,
+	"remoteUser": "root",
+    "postCreateCommand": "pip3 install -r dev-requirements.txt",
+    "postStartCommand": "zsh",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace/collections/ansible_collections/ibm/ibm_zos_cics,type=bind",
+	"workspaceFolder": "/workspace/collections/ansible_collections/ibm/ibm_zos_cics"
+}

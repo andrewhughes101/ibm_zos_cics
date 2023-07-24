@@ -1,0 +1,22 @@
+{
+    "id": "ansible",
+    "version": "1.0.0",
+    "name": "Ansible Feature",
+    "description": "Install Ansible by version name",
+    "options": {
+        "version": {
+            "default": "latest",
+            "description": "Select the version of Ansible to install.",
+            "proposals": [
+                "latest",
+                "stable-2.11",
+                "stable-2.12",
+                "stable-2.13",
+                "stable-2.14",
+                "stable-2.15",
+                "devel"
+            ],
+            "type": "string"
+        }
+    }
+}
