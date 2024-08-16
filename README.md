@@ -28,7 +28,7 @@ for community adoption. Once contributors review community usage, feedback,
 and are satisfied with the content published, the collection will then be
 released to [Ansible Automation Hub](https://www.ansible.com/products/automation-hub)
 as **certified** and **IBM supported** for
-**Red Hat® Ansible Automation Platform subscribers**. 
+**Red Hat® Ansible Automation Platform subscribers**.
 
 
 For guides and reference, please review the [documentation](https://ibm.github.io/z_ansible_collections_doc/index.html).
