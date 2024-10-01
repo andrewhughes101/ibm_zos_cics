@@ -11,5 +11,5 @@ environment_vars:
   _TAG_REDIR_IN: "txt"
   _TAG_REDIR_OUT: "txt"
   LANG: "C"
-  TMPDIR: "/u/{{ ansible_user }}/tmp"
-  PYTHONSTDINENCODING: "cp1047"
+  TMPDIR: "/u/{{ ansible_user | lower }}/tmp"
+  
