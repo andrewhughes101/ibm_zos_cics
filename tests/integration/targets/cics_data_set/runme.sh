@@ -55,7 +55,7 @@ sed -e "s/MODULE_NAME/transaction_dump/g"    -e "s/DATA_SET_NAME_LOWER/dfhdmpa/g
 # For debug, uncomment this to save the generated playbooks to the output directory if you want to see the effect of the sed commands
 # cp -r playbooks $ANSIBLE_COLLECTIONS_PATH/ansible_collections/ibm/ibm_zos_cics/tests/output/templates
 
-ansible-playbook -i "$INV_PATH" -e "@$VAR_PATH" -e "@$ZOS_ENV" -e "{data_set_name: DFHTEMP, vsam: true}"                playbooks/initial_absent_aux_temp_storage.yml
+ansible-playbook -i "$INV_PATH" -e "@$VAR_PATH" -e "@$ZOS_ENV" -e "{data_set_name: DFHTEMP, vsam: true}"                playbooks/initial_absent_aux_temp_storage.yml -vvvv
 ansible-playbook -i "$INV_PATH" -e "@$VAR_PATH" -e "@$ZOS_ENV" -e "{data_set_name: DFHCSD, vsam: true, recreate: true}" playbooks/initial_absent_csd.yml
 ansible-playbook -i "$INV_PATH" -e "@$VAR_PATH" -e "@$ZOS_ENV" -e "{data_set_name: DFHGCD, vsam: true, start: true}"    playbooks/initial_absent_global_catalog.yml
 ansible-playbook -i "$INV_PATH" -e "@$VAR_PATH" -e "@$ZOS_ENV" -e "{data_set_name: DFHINTRA, vsam: true}"               playbooks/initial_absent_td_intrapartition.yml
